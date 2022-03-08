@@ -1,0 +1,272 @@
+/*box sizing for for equal div*/
+* {box-sizing: border-box;
+}
+/*body*/
+body {
+  height:100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:#252323 ;
+
+}
+/*main nav**/
+.topnav {
+  overflow: hidden;
+  background-color: #000000;
+  width:100%;
+}
+@media screen and (max-width: 600px) {
+  .topnav a {
+    float: none;
+  }
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav .search-container {
+  float: none;
+}
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width:60%;
+}
+
+.topnav .search-container button {
+  float: none;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background-color:rgb(184, 181, 181)
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid 
+  }
+}
+.search{
+  height:16px;
+}
+#login1{
+  background-color: #c0a320;
+  border-radius: 5px;
+}
+
+#login1:hover{
+  background-color: rgb(182, 138, 17);
+}
+#login2:hover{
+  background-color: rgb(182, 138, 17);
+}
+/*end of main nav**/
+/*nav2*/
+.nav2 {
+  overflow: hidden;
+  background-color: #c0a320;
+}
+
+.nav2 a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.nav2 a:hover {
+  background-color:none;
+  color: black;
+}
+
+.nav2 a.active {
+  background-color:none;
+  color:none;
+}
+
+.nav2 .search-container {
+  float: right;
+}
+
+.nav2 input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.nav2 .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background:none;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.nav2 .search-container button:hover {
+  background:none;
+}
+
+@media screen and (max-width: 600px) {
+  .nav2 .search-container {
+    float: none;
+  }
+  .nav2 a, .topnav input[type=text], .nav2 .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .nav2 input[type=text] {
+    border: 1px solid;  
+  }
+}
+/*grids*/
+.body-grid{
+  padding: 2% 2% 0% 2%;
+}
+.grid1{
+  background-color: #fed053;
+  float:none;
+  height: 400;
+  width:1000;
+  padding: 1% 2% 1% 2%;
+  margin: 10px;
+}
+#tom{
+  width: 100%;
+  height: auto;
+}
+/*2nd row of grids*/
+.flex-container {
+  display: flex;
+  background-color:#252323 ;
+  flex-direction: row;  
+  justify-content: space-around;
+}
+
+.flex-container > div {
+  background-color: #fed053;
+  margin: 10x;
+  padding: 1% 2% 10% 2%;
+  height: 400px;
+  width: 400px;
+}
+.flex-container2 {
+  display: flex;
+  background-color:#252323 ;
+  flex-direction: row;  
+  justify-content: space-around;
+}
+
+.flex-container2 > div {
+  background-color: #fed053;
+  margin: 10x;
+  padding: 20px;
+  height: 400px;
+  width: 400px;
+}
+.flex-container3 {
+  display: flex;
+  background-color:#252323 ;
+  flex-direction: row;  
+  justify-content: space-around;
+}
+
+.flex-container3 > div {
+  background-color: #fed053;
+  margin: 10x;
+  padding: 20px;
+  height: 400px;
+  width: 400px;
+}
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 800px) {
+  .flex-container2 {
+    flex-direction:column;
+  }
+}
+@media (max-width: 800px) {
+  .flex-container3 {
+    flex-direction: column;
+  }
+}
+.back-to-top{
+  background-color: #000000;
+  width:100%;
+  padding: 10px;
+}
+.backto{
+  width: 10%;
+  height: 50%;
+  padding:0.5%
+}
+.footer {
+  width: 100%;
+  background-color: #c0a320;
+  float: right;
+}
+.address{
+  float:left;
+  padding: 20px;
+}
+.details{
+  float:none;
+  padding-right: 25%;
+}
+.policy{
+  float: right;
+  padding:20px;
+  padding-top:0px;
+}
+.contact{
+  float: right;
+  padding:20px;
+  padding-top:0px;
+}
+.about{
+  float: right;
+  padding:20px;
+  padding-top:0px;
+}
+#hil2{
+  width: 100%;
+  height: auto;
+}

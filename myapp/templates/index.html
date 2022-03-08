@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="{% static 'favicon.png'%}" >
+    <title>shoppingcs</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+  <!--top navbar-->
+  <div class="topnav">
+    <a class="active" href="index.html"><img src="{% static 'logo.png' %}" alt="image not found" class="logo"></a>
+    <a href="#about"></a>
+    <a href="#contact"></a>
+    <!--search box-->
+    <div class="search-container">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><img src="{% static 'search.png'%}" class="search"></img></button>
+        <button id="login1" type="submit" onclick="window.location = '{ % url login %}'">log in</button>
+      </form>
+    </div>
+  </div>
+  <!--end of top navbar-->
+  <div class="nav2">
+    <a class="electronics" href="#home">Electronics</a>
+    <a href="#appliances">Tv & appliances</a>
+    <a href="#sports">Sports</a>
+    <a href="#fashion">Fashion</a>
+  </div>
+  <!--image grids-->
+<div class="body-grid">
+  <div class="grid1" class="overlay">
+    <img src="{% static 'vivo.jpg' %}" alt="" id="tom">
+  </div>
+</div>
+<!--grid2-->
+<div class="flex-container">
+  <div><img src="{% static 'boat.jpg' %}" alt="">
+  </div>
+  <div><img src="{% static 'lacoste.jpg' %}" alt=""></div>
+  <div><img src="{% static 'boat.jpg' %}" alt=""></div>
+</div>
+<br>
+<div class="flex-container2">
+  <div><img src="{% static 'boat.jpg' %}"  alt="">
+  </div>
+  <div><img src="{% static 'boat.jpg' %}"  alt=""></div>
+  <div><img src="{% static 'boat.jpg' %}"  alt=""></div>
+</div>
+<br>
+<div class="flex-container3">
+  <div><img src="{% static 'boat.jpg' %}"  alt="">
+  </div>
+  <div><img src="{% static 'boat.jpg' %}"  alt=""></div>
+  <div><img src="{% static 'boat.jpg' %}"  alt=""></div>
+</div>
+
+<!--footer contain address -->
+<div class="back-to-top"><a href="index.html"><div align="center"><button class="backto">back to top</button></div></a></div>
+<div class="footer">
+  <div class="address"><h2>REGISTERED OFFICE ADDRESS</h2>
+    <P>5th floor,CAFIT Square,Hilite Business Park,Thondayad Bye-Pass</P>
+    <p>Thondayad,Hilite city,poovangal,kozhikode,kerala 673016</p>
+  </div>
+    <div class="details">
+      <div class="policy"><h3>POLICY</h3>
+      <p>Return Policy</p>
+      <p>Terms of use</p>
+      <p>security</p>
+      <p>privacy</p>
+    </div>
+    <div class="contact"><h3>ABOUT</h3>
+      <p>Contact Us</p>
+      <p>About Us</p>
+      <p>Careers</p>
+      <p>Cybersquare</p>
+      <p>Wholesale</p>
+
+    </div> 
+    <div class="about"><h3>ABOUT US</h3>
+      <p>Facebook</p>
+      <p>Twitter</p>
+      <p>Youtube</p>
+    </div>
+  </div>
+ 
+  
+  
+</body>
+</html>

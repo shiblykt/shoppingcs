@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign-up to ShoppingCS</title>
+    <link rel="icon" type="image/svg+xml" href="{% static 'favicon.png'%}" >
+    <link rel="stylesheet" href="{% static 'form.css' %}">
+
+</head>
+<body>
+  <div class="dummy">
+    <div class="content"><br><br><img src="{% static 'logo2.jpg' %}" alt="">
+    </div>
+  </div>
+  <div class="center">
+    <div><h1 style="color:white;" align="center">Create<span style="color: #fed053;"> account</span></h1></div>
+     <style>
+         h5{
+             color: red;
+         }
+     </style>  
+    {% for message in messages %}
+      <h5>{{message}}</h5>
+    {% endfor %}
+      <form action="" method="POST">
+        {% csrf_token %}
+        <p style="color: white;">Your name</p>
+        <input type="text" class="username-box" name="username">
+        <p style="color: white;">Email</p>
+        <input type="text" class="username-box" name="email">
+        <p id="passtxt" style="color:white">password</p>
+        <input type="password" class="password-box" name="password">
+        <p id="passtxt" style="color:white">password again</p>
+        <input type="password" class="password-box" name="password2">
+        <input type="submit" class="button" value="sign-up">
+        <p style="color: white;font-family:amazon ember;"> By continuing, you agree to shoppingcs's Conditions of Use and Privacy Notice.</p>
+      </form>
+  </div>
+  <p align="center" style="color: white;font-family:amazon ember;"> Already have an account? <a href="#Sign-in">Sign-in</a>
+    </p>
+ 
+</body>
+</html>
