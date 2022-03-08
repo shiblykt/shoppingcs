@@ -13,6 +13,12 @@ def login(request):
 def signup(request):
     return render(request,'signup.html')
 
+def forgotpassword(request):
+    return render(request,'forgotpassword.html')
+
+def otp(request):
+    return render(request,'otp.html')
+
 def signup(request):
     if request.method == 'POST':
         username= request.POST['username']
