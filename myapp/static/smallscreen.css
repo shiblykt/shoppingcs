@@ -1,0 +1,59 @@
+@media screen and (max-width: 600px) {
+    .header-div{
+      float: none;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .logo-div{
+      float: left;
+      width: 100%;
+    }
+  }
+ 
+ 
+  @media screen and (max-width: 600px) {
+    .dummy-div2 {
+      float: none;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .cart-div {
+      float: none;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .searchbar {
+      float: left;
+      width: 85%;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .search-button {
+      float: left;
+      
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .login-button {
+      float:right
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .cart {
+      display:none;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .nav2  {
+        float:none;
+        width:100%;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    body {
+      background-color: black;
+    }
+  }

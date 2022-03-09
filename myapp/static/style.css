@@ -2,96 +2,69 @@
 * {box-sizing: border-box;
 }
 /*body*/
-body {
-  height:100%;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color:#252323 ;
+.filler-div{
+  width: 100%;
+  height: 10px;
+  background-color: black;
 }
-
-/*main nav**/
-.topnav {
-  background-color: #000000;
+.header-div{
   width:100%;
-
+  height:50px;
+  background-color: black;
+  position: sticky;
 }
-@media screen and (max-width: 600px) {
-  .topnav a {
-    float: none;
-  }
-}
-.topnav a {
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-.topnav .search-container {
-  float:left;
-}
-.topnav input[type=text] {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
-  border: none;
-  width:60%;
-}
-
-.topnav .search-container button {
-  float: none;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
-}
-
-.topnav .search-container button:hover {
-  background-color:rgb(184, 181, 181)
-}
-
-
-@media screen and (max-width: 600px) {
-  .topnav .search-container {
-    float: none;
-  }
-  .topnav a, .topnav input[type=text], .topnav .search-container button {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
-  .topnav input[type=text] {
-    border: 1px solid 
-  }
-}
-.search{
-  height:16px;
-}
-.search-container{
+.logo-div{
+  width: 20%;
+  height: 50px;
+  background-color: none;
   float: left;
 }
-#login1{
-  background-color: #c0a320;
+.search-div{
+  width:50%;
+  height:50px;
+  background-color:none;
+  float: left;
+}
+.dummy-div{
+  width: 10%;
+  height: 50px;
+  background-color: none;
+  float: left;
+}
+.dummy-div2{
+  width: 10%;
+  height: 50px;
+  background-color:none;
+  float: left;
+}
+.cart-div{
+  float: left;
+  height: 20px;
+}
+/* searchbar*/
+.searchbar{
+  width: 80%;
+  height: 30px;
   border-radius: 5px;
-  float: right;
 }
-.log-container{
-  float: right;
+input[type=text]:focus {
+  border: 3px solid #fed053;
 }
-#login1:hover{
-  background-color: rgb(182, 138, 17);
+input[type=text] {
+  padding: 12px 20px;
+  box-sizing: border-box;
+  outline: 0px;
 }
-#login2:hover{
-  background-color: rgb(182, 138, 17);
+.search-button{
+  border-radius: 5px;
+  background-color:#c0a320 ;
 }
-/*end of main nav**/
+.login-button{
+  border-radius: 5px;
+  background-color: #c0a320;
+}
+
+/*nav bar*/
 /*nav2*/
 .nav2 {
   overflow: hidden;
@@ -109,57 +82,16 @@ body {
 }
 
 .nav2 a:hover {
-  background-color:none;
+  background-color: #ddd;
   color: black;
 }
 
 .nav2 a.active {
   background-color:none;
-  color:none;
+  color: white;
 }
 
-.nav2 .search-container {
-  float: right;
-}
-
-.nav2 input[type=text] {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
-  border: none;
-}
-
-.nav2 .search-container button {
-  float: right;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background:none;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
-}
-
-.nav2 .search-container button:hover {
-  background:none;
-}
-
-@media screen and (max-width: 600px) {
-  .nav2 .search-container {
-    float: none;
-  }
-  .nav2 a, .topnav input[type=text], .nav2 .search-container button {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
-  .nav2 input[type=text] {
-    border: 1px solid;  
-  }
-}
+/*end of header*/
 /*grids*/
 .body-grid{
   padding: 2% 2% 0% 2%;

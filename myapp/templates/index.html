@@ -10,26 +10,39 @@
     <link rel="icon" type="image/svg+xml" href="{% static 'favicon.png'%}" >
     <title>shoppingcs</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
-    <script src="{% static 'carousel.js' %}" type="text/javascript"></script>
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="{% static 'smallscreen.css' %}">
 </head>
 <body>
-  <!--top navbar-->
-  <div class="topnav">
-    <div class="logo-container"><a class="active" href="{% url 'index' %}"><img src="{% static 'logo.png' %}" alt="image not found" class="logo"></a></div>
-    <!--search box-->
-      <div class="search-container"><input type="text" placeholder="Search.." name="search">
-        <button type="submit"><img src="{% static 'search.png'%}" class="search"></img></button>
+  <div class="filler-div"></div>
+  <!--header-->
+  <nav>
+      <div class="header-div">
+          <div class="logo-div">
+              <a href="#"><img src="{% static 'logo2.jpg' %}" class=logo alt="logo"></a>
+          </div>
+          <!--search bar-->
+          <div class="search-div">
+              <form action="POST">
+                  <input type="text" class="searchbar">
+                  <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+              </form>
+          </div>
+          <div class="dummy-div"></div>
+          <div class="dummy-div2"><a href="{% url 'login' %}" ><button class="login-button" type="submit">log in</button> </a></div>
+          <div class="cart-div"><a href=""><img src="{% static 'cart.jpg' %}" alt="shopping cart" class="cart"></a></div>
       </div>
-    <div class="log-container">
-      <a href="{% url 'login' %}" ><button id="login1" type="submit">log in</button> </a></div>
-    </div>
+  </nav>
+  <!--/header-->
+  <!--navigation bar-->
+  <nav>
+      <div class="nav2">
+          <a  href="#home">Electronics</a>
+          <a href="#appliances">Tv & appliances</a>
+          <a href="#sports">Sports</a>
+          <a href="#fashion">Fashion</a>
+        </div>
   <!--end of top navbar-->
-  <div class="nav2">
-    <a class="electronics" href="#home">Electronics</a>
-    <a href="#appliances">Tv & appliances</a>
-    <a href="#sports">Sports</a>
-    <a href="#fashion">Fashion</a>
-  </div>
+  
   <!--carousel-->
   <!--image grids-->
 <div class="body-grid">
@@ -82,8 +95,8 @@
       <p>Wholesale</p>
 
     </div> 
-    <div class="about"><h3>ABOUT US</h3>
-      <p>Facebook</p>
+    <div class="about"><h3>Buisness with US</h3>
+      <a href="{ url % 'seller/sellerhome' %}" >sell with us</a>
       <p>Twitter</p>
       <p>Youtube</p>
     </div>
