@@ -1,2 +1,0 @@
-# shoppingcs
-a ecommerce website
