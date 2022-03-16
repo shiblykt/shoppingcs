@@ -6,4 +6,4 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
 def sellerhome(request):
-    return render ("request, sellerhome.html")
+    return render (request,"sellerhome.html")
