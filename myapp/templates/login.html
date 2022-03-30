@@ -19,13 +19,24 @@
   </div>
   <div class="center">
     <div><h1 style="color:white;" align="center">sign-<span style="color: #fed053;">in</span></h1></div>
-      <form action="">
+
+    <style>
+      h5{
+          color: red;
+      }
+  </style>  
+ {% for message in messages %}
+   <h5>{{message}}</h5>
+ {% endfor %}
+
+      <form action="" method="POST">
+        {% csrf_token %}
         <p style="color: white;">Username</p>
         <input type="text" class="username-box">
         <div><div><p id="passtxt" style="color:white">password</p></div>
       <div><br><a href="{% url 'forgotpassword' %}" id="forgtpass">forgot password</a></div></div>
         <input type="password" class="password-box">
-        <input type="button" class="button" value="sign-in">
+        <input type="submit" class="button" value="sign-in">
         <p style="color: white;font-family:amazon ember;"> By continuing, you agree to shoppingcs's Conditions of Use and Privacy Notice.</p>
       </form>
   </div>
