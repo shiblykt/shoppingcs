@@ -55,8 +55,12 @@ def login(request):
             return redirect('index')
         else:
             messages.info(request,'invalid credentials')
-            return redirect(request,'login.html')
+            return redirect('login')
     else:
         return render(request,'login.html')
+
+def logout(request):
+    auth.logout(request)
+    return redirect('index')
 
 # Create your views here.
