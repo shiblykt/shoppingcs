@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/svg+xml" href="{% static 'images/favicon.png'%}" >
     <title>shoppingcs</title>
@@ -27,9 +30,29 @@
                   <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
               </form>
           </div>
-          <div class="dummy-div"></div>
+          {% if user.is_authenticated %}
+          
+          <div class="dummy-div">
+            <img id="avatar" src="{% static 'images/a.jpg' %}" alt="">
+            <div class="dropdown">
+              <span class="dropbtn"><h6 style="color: white;">hello,{{user.username}}</h6></span>
+              <div class="dropdown-content">
+                <a href="#">Your Profile</a>
+                <a href="#">Your Orders</a>
+                <a href="#">Your Suggestions</a>
+                <a href="#">Your Wishlists</a>
+                <a href="{% url 'logout' %}">Log Out</a>
+              </div>
+            </div>
+            
+            
+           
+          </div>
+          <div class="cart-div"><a href=""><img id=cart src="{% static 'images/cart.jpg' %}" alt="shopping cart" class="cart"></a></div>
+
+          {% else %}
           <div class="dummy-div2"><a href="{% url 'login' %}" ><button class="login-button" type="submit">log in</button> </a></div>
-          <div class="cart-div"><a href=""><img src="{% static 'images/cart.jpg' %}" alt="shopping cart" class="cart"></a></div>
+          {% endif %}
       </div>
   </nav>
   <!--/header-->
@@ -53,12 +76,13 @@
 </div>
 <!--grid2-->
 {% for gal in gals %}
-<div class="flex-container">
+<div><img src="{{gal.img.url}}" alt=""></div>
+<!-- <div class="flex-container">
   <div><img src="{{gal.img.url}}" alt="">
   </div>
   <div><img src="{{gal.img.url}}" alt=""></div>
-  <div><img src="{{gal.img.url}}" alt=""></div>
-</div>
+  
+</div> -->
 <br>
 {% endfor %}
 <!--end-->

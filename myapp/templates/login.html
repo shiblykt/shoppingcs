@@ -14,7 +14,7 @@
 </head>
 <body>
   <div class="dummy">
-    <div class="content"><br><br><a href="{% url 'index' %}"><img src="{% static 'logo2.jpg' %}" alt=""></a>
+    <div class="content"><br><br><a href="{% url 'index' %}"><img src="{% static 'images/logo2.jpg' %}" alt=""></a>
     </div>
   </div>
   <div class="center">
@@ -32,10 +32,10 @@
       <form action="" method="POST">
         {% csrf_token %}
         <p style="color: white;">Username</p>
-        <input type="text" class="username-box">
+        <input type="text" class="username-box" name="username">
         <div><div><p id="passtxt" style="color:white">password</p></div>
       <div><br><a href="{% url 'forgotpassword' %}" id="forgtpass">forgot password</a></div></div>
-        <input type="password" class="password-box">
+        <input type="password" class="password-box" name="password">
         <input type="submit" class="button" value="sign-in">
         <p style="color: white;font-family:amazon ember;"> By continuing, you agree to shoppingcs's Conditions of Use and Privacy Notice.</p>
       </form>

@@ -10,7 +10,12 @@
       width: 100%;
     }
   }
- 
+  @media screen and (max-width: 600px) {
+    .search-div{
+      float: left;
+      width: 90%;
+    }
+  }
  
   @media screen and (max-width: 600px) {
     .dummy-div2 {
@@ -26,19 +31,19 @@
   }
   @media screen and (max-width: 600px) {
     .searchbar {
-      float: left;
-      width: 85%;
+      width: 90%;
     }
   }
   @media screen and (max-width: 600px) {
     .search-button {
-      float: left;
+      float: right;
       
     }
   }
   @media screen and (max-width: 600px) {
     .login-button {
-      float:right
+      float:right;
+      width:100%;
     }
   }
   @media screen and (max-width: 600px) {
